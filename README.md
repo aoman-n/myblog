@@ -26,7 +26,8 @@
 
 ### Association
 - has_many :comments
-- belongs_to :category
+- has_many :tags, through: :article_tags
+- has_many :article_tags
 
 
 ## commentsテーブル
@@ -42,10 +43,25 @@
 - belongs_to :article
 
 
-## categorysテーブル
+## tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
 
 ### Association
-- has_many :articles
+- has_many :articles, through: :article_tags
+- has_many :article_tags
+
+## article_tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|article_id|integer|null: false, foreign_key: true|
+|tag_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :article
+- belongs_to :tag
+
+
+
+
