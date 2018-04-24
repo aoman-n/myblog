@@ -1,22 +1,12 @@
 # DB設計
 
-## avatarsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false, unique: true|
-|image|string|null: false, unique: true|
-
-### Association
-- has_many :users
-
 
 ## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
-|avatar_id|integer|foreign_key: true|
+|avatar|string|foreign_key: true|
 
 ### Association
 - belongs_to :avatar
