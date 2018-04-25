@@ -1,0 +1,10 @@
+footer {
+  height: $footer-height;
+  background-color: $footer-back-color;
+  .footer-body {
+    text-align: center;
+    line-height: $footer-height;
+  }
+  &__text {
+  }
+}

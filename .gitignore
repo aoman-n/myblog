@@ -17,6 +17,7 @@
 .byebug_history
 
 config/secrets.yml
+build_image.txt
 
 images/*
 image/*

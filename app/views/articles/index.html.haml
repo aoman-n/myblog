@@ -1,0 +1,85 @@
+%header
+  .header-body
+    .header-left.clearfix
+      .header-left__title エセキー太
+      .header-left__search search
+    .header-right.clearfix
+      = link_to "/", class:"header-right__mypage" do
+        マイページ
+        %i.fa.fa-caret-right
+      = link_to "/", class:"header-right__article" do
+        投稿する
+        %i.fa.fa-edit
+
+.main
+  .main-container.clearfix
+    .left-content
+      %h3.left-content-head
+        記事一覧
+      .article-content.clearfix
+        %a{href: "/", class: "article-content__user-avatar"} ava
+        .article
+          = link_to "/", class:"article__title" do
+            Rubyの文法について
+          %ul.article__info
+            %li by aoba
+            %li
+              %span.i.fa.fa-thumbs-up 3
+            %li 2018/4/25
+
+      .article-content.clearfix
+        %a{href: "/", class: "article-content__user-avatar"} ava
+        .article
+          = link_to "/", class:"article__title" do
+            Rubyの文法について
+          %ul.article__info
+            %li by aoba
+            %li
+              %span.i.fa.fa-thumbs-up 3
+            %li 2018/4/25
+
+      .article-content.clearfix
+        %a{href: "/", class: "article-content__user-avatar"} ava
+        .article
+          = link_to "/", class:"article__title" do
+            Rubyの文法について
+          %ul.article__info
+            %li by aoba
+            %li
+              %span.i.fa.fa-thumbs-up 3
+            %li 2018/4/25
+
+    .right-content
+      .tag-content
+        .tag-content-head
+          タグ数ランキング
+        .tag-list.clearfix
+          .tag-item.clearfix
+            %p.tag-item__rank
+              1.
+            %p.tag-item__text
+              Ruby
+        .tag-list.clearfix
+          .tag-item.clearfix
+            %p.tag-item__rank
+              1.
+            %p.tag-item__text
+              Ruby
+
+      .like-content
+        .like-content-head
+          like数ランキング
+        .like-list.clearfix
+          .like-item.clearfix
+            %p.like-item__name
+              Rubyの文法について
+            %p.like-item__count
+              %span.i.fa.fa-thumbs-up 6
+
+%footer
+  .footer-body
+    .footer-body__text
+      くそむしさん、ご来場ありがとうございました( ◠‿◠ )
+      %span.i.fa.fa-tasks.fa-spin
+
+

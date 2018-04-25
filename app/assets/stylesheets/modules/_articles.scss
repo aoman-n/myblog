@@ -1,0 +1,98 @@
+.main {
+  background-color: $main-back-color;
+  min-height: 800px;
+  padding: 30px 10px;
+  .main-container {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  .left-content {
+    background-color: white;
+    float: left;
+    width: 600px;
+    min-height: 800px;
+    .left-content-head {
+      font-size: 20px;
+      padding: 15px 25px;
+    }
+    .article-content {
+      padding: 15px 25px;
+      border-top: solid 2px $main-back-color;
+      &__user-avatar {
+        float: left;
+        margin-right: 10px;
+        @include hover();
+      }
+      .article {
+        float: left;
+        &__title {
+          text-decoration: none;
+          font-size: 20px;
+          @include hover();
+        }
+        &__info {
+          font-size: 14px;
+          font-style: italic;
+          li {
+            float: left;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .right-content {
+    font-family: serif;
+    margin-left: 20px;
+    float: left;
+    width: 260px;
+    .tag-content {
+      background-color: white;
+      padding: 10px 10px;
+      margin-bottom: 15px;
+      min-height: 250px;
+      .tag-content-head {
+        padding: 5px 0 0 5px;
+        margin-bottom: 10px
+      }
+      .tag-list {
+        border-bottom: solid 1px $main-back-color;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        .tag-item {
+          margin-left: 15px;
+          &__rank {
+            float: left;
+          }
+          &__text {
+            float: left;
+          }
+        }
+      }
+    }
+    .like-content {
+      background-color: white;
+      padding: 10px 10px;
+      margin-bottom: 15px;
+      min-height: 250px;
+      .like-content-head {
+        padding: 5px 0 0 5px;
+        margin-bottom: 10px
+      }
+      .like-list {
+        border-bottom: solid 1px $main-back-color;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        .like-item {
+          &__name {
+            float: left;
+          }
+          &__count {
+            float: left;
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
