@@ -1,0 +1,61 @@
+body {
+  font-family: Verdana,"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+}
+
+header {
+  background-color: $header-back-color;
+  width: 100%;
+  height: $header-height;
+  color: $header-font-color;
+}
+
+.header-body {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.header-left {
+  line-height: $header-height;
+  float: left;
+  margin-left: 20px;
+  &__title {
+    font-size: 20px;
+    margin-right: 15px;
+    float: left;
+  }
+  &__search {
+    float: left;
+  }
+}
+
+.header-right {
+  float: right;
+  margin-right: 40px;
+  font-size: 13px;
+  line-height: 50px;
+  &__mypage {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: $header-font-color;
+    transition: .4s;
+    margin-right: 20px;
+    @include hover();
+  }
+  &__article {
+    color: #FFF;/*文字・アイコン色*/
+    border-radius: 7px;/*角丸に*/
+    display: inline-block;
+    height: 38px;/*高さ*/
+    width: 120px;/*幅*/
+    text-align: center;/*中身を中央寄せ*/
+    line-height: 40px;/*高さと合わせる*/
+    vertical-align: middle;/*垂直中央寄せ*/
+    background: gray;
+    overflow: hidden;/*はみ出た部分を隠す*/
+    text-decoration:none;/*下線は消す*/
+    @include hover();
+  }
+}
