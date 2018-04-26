@@ -61,6 +61,35 @@
 - belongs_to :article
 - belongs_to :tag
 
+# 機能一覧
 
+## article投稿機能
+- 投稿(text,image)
+- 削除
+- 編集
 
+## userログイン機能
+- sign_up(+avata)
+- login
+- logout
 
+## コメント投稿機能
+- 投稿
+
+## tag付け機能
+- 投稿時のタグ選択
+- タグ検索
+
+## search機能
+- 記事検索(title + body)
+- user検索
+
+## Goodボタン機能
+- 記事に対してGood(非同期通信)
+
+## ランキング表示機能
+- tag付けランキング
+- good数ランキング
+
+## お気に入りユーザー機能
+- お気に入りユーザーの記事一覧表示
