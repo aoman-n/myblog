@@ -6,6 +6,8 @@
   %em (6 characters maximum)
   %br/
   = f.text_field :name, autofocus: true, maxlength: "6"
+  .user-image.col-md-2
+  = f.file_field :avatar
   .field
     = f.label :email
     %br/
