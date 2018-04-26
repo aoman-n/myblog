@@ -1,0 +1,38 @@
+.articles-form {
+  min-height: 700px;
+  background-color: #D8D8D8;
+  padding-top: 80px;
+  .form-content {
+    min-width: 400px;
+    width: calc(100% - 500px);
+    background-color: white;
+    margin: 0 auto;
+    min-height: calc(100vh - 100px);
+    .form-body {
+      padding: 30px 50px;
+    }
+    .form-title {
+      &__head {
+        padding: 10px 0;
+        font-size: 22px;
+        font-style: italic;
+      }
+      &__input {
+        width: calc(100% - 60px);
+        height: 30px;
+      }
+    }
+    .form-text {
+      &__head {
+        font-size: 22px;
+        padding: 10px 0;
+        font-style: italic;
+      }
+      &__input {
+        width: calc(100% - 60px);
+        min-height: 400px;
+      }
+
+    }
+  }
+}

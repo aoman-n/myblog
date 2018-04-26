@@ -28,9 +28,9 @@
             .comment-right
               .comment-right__user-name aoba
               .comment-right__text おはようございます
-          .form
-            %h4.form__title Write a comment
-            .form__body
+          .comments-form
+            %h4.comments-form__title Write a comment
+            .comments-form__body
               = form_for "#" do |f|
                 = f.text_area :content, class: 'message', placeholder:'Input comment'
                 = f.submit '送信', class: 'send-bottun'
@@ -61,7 +61,5 @@
               Rubyの文法について
             %p.like-item__count
               %span.i.fa.fa-thumbs-up 6
-
-
 
 = render :partial => "footer"

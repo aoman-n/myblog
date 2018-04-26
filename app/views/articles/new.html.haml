@@ -1,0 +1,18 @@
+= render :partial => "header"
+
+.articles-form
+  .form-content
+    = form_for @article, html: { class: "form-body"} do |f|
+      .form-title
+        %p.form-title__head TITLE
+        = f.text_field :title, class: "form-title__input", placeholder: "タイトルを入力してください"
+      .form-text
+        %p.form-text__head TEXT
+        = f.text_area :body, class: "form-text__input", placeholder: "本文を入力してください"
+      .form-image
+        %p.form-image__head
+        = f.file_field :image, class: "form-image__input"
+      .form-submit
+        = f.submit "SEND", class: 'form-submit__bottun'
+
+= render :partial => "footer"
