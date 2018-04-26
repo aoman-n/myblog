@@ -1,0 +1,98 @@
+.s-article-content {
+  float: left;
+  width: 600px;
+  min-height: 800px;
+  .s-head {
+    min-height: 150px;
+    margin-bottom: 20px;
+    background-color: white;
+    .s-head-body {
+      padding: 20px 30px;
+      .s-user-info {
+        &__user-avatar {
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+        }
+        &__name {
+
+        }
+        &__date {
+
+        }
+      }
+      &__title {
+        margin-top: 20px;
+        font-size: 30px;
+      }
+    }
+  }
+  .s-main {
+    min-height: 500px;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  .comments-content {
+    background-color: white;
+    min-height: 300px;
+    .comment-body {
+      padding: 20px 20px;
+      &__title {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .comment {
+        &-left {
+          float: left;
+        }
+        &-right {
+          float: left;
+          &__user-name {
+
+          }
+          &__text {
+
+          }
+        }
+      }
+      .form {
+        margin-top: 30px;
+        &__title {
+          margin-bottom: 10px;
+        }
+        &__body {
+          .message {
+            float: left;
+            width: calc(100% - 150px);
+            height: 70px;
+            &:focus {
+              border: 3px solid #8cd460;
+              outline: 0;
+            }
+          }
+          .send-bottun {
+            margin-left: 20px;
+            float: left;
+            display: inline-block;
+            text-decoration: none;
+            background: #8cd460;
+            color: rgba(255, 255, 255, 0.47);
+            font-weight: bold;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            // overflow: hidden;
+            box-shadow: 0px 0px 0px 5px #8cd460;
+            border: solid 2px rgba(255, 255, 255, 0.47);
+            transition: .4s;
+            @include hover ();
+          }
+
+        }
+      }
+    }
+  }
+ }

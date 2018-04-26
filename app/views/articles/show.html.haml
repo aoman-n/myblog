@@ -1,0 +1,67 @@
+= render :partial => "header"
+.main
+  .main-container.clearfix
+    .s-article-content
+      .s-head
+        .s-head-body
+          .s-user-info
+            %a{href: "article_path", class: "s-user-info__user-avatar"} ava
+            %span.s-user-info__name aoba
+            %span.s-user-info__date 2014/4/4
+          #h3.s-head-body__title ルビーの文法について
+
+      .s-main
+
+      .comments-content
+        .comment-body
+          %h3.comment-body__title Comment(20)
+
+          .comment.clearfix
+            .comment-left
+              = image_tag("#", alt: "profile_photo", class: "media-object", style: "width: 70px; height: 70px;")
+            .comment-right
+              .comment-right__user-name aoba
+              .comment-right__text おはようございます
+          .comment.clearfix
+            .comment-left
+              = image_tag("#", alt: "profile_photo", class: "media-object", style: "width: 70px; height: 70px;")
+            .comment-right
+              .comment-right__user-name aoba
+              .comment-right__text おはようございます
+          .form
+            %h4.form__title Write a comment
+            .form__body
+              = form_for "#" do |f|
+                = f.text_area :content, class: 'message', placeholder:'Input comment'
+                = f.submit '送信', class: 'send-bottun'
+
+    .right-content
+      .tag-content
+        .tag-content-head
+          タグ数ランキング
+        .tag-list.clearfix
+          .tag-item.clearfix
+            %p.tag-item__rank
+              1.
+            %p.tag-item__text
+              Ruby
+        .tag-list.clearfix
+          .tag-item.clearfix
+            %p.tag-item__rank
+              1.
+            %p.tag-item__text
+              Ruby
+
+      .like-content
+        .like-content-head
+          like数ランキング
+        .like-list.clearfix
+          .like-item.clearfix
+            %p.like-item__name
+              Rubyの文法について
+            %p.like-item__count
+              %span.i.fa.fa-thumbs-up 6
+
+
+
+= render :partial => "footer"

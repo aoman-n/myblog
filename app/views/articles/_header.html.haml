@@ -1,0 +1,12 @@
+%header
+  .header-body
+    .header-left.clearfix
+      .header-left__title エセキー太
+      .header-left__search search
+    .header-right.clearfix
+      = link_to "/", class:"header-right__mypage" do
+        マイページ
+        %i.fa.fa-caret-right
+      = link_to "/", class:"header-right__article" do
+        投稿する
+        %i.fa.fa-edit

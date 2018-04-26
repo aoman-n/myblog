@@ -17,9 +17,9 @@
       %h3.left-content-head
         記事一覧
       .article-content.clearfix
-        %a{href: "/", class: "article-content__user-avatar"} ava
+        %a{href: "article_path", class: "article-content__user-avatar"} ava
         .article
-          = link_to "/", class:"article__title" do
+          = link_to "/articles/1", class:"article__title" do
             Rubyの文法について
           %ul.article__info
             %li by aoba
