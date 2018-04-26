@@ -25,6 +25,7 @@ header {
     float: left;
     text-decoration: none;
     color: $header-font-color;
+    @include hover();
   }
   &__search {
     float: left;
