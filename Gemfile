@@ -59,3 +59,4 @@ gem 'compass-rails','~> 2.0'
 gem "font-awesome-rails"
 gem 'font-awesome-sass'
 gem "devise"
+gem 'bootstrap-sass'

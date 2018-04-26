@@ -1,15 +1,19 @@
 %header
   .header-body
     .header-left.clearfix
-      .header-left__title エセキー太
+      %a{href: "/", class: "header-left__title"} エセキー太
       .header-left__search search
     .header-right.clearfix
-      = link_to "/", class:"header-right__mypage" do
-        マイページ
-        %i.fa.fa-caret-right
-      = link_to "/users/sign_up", class:"header-right__mypage" do
-        新規登録
-        %i.fa.fa-caret-right
-      = link_to new_article_path, class:"header-right__article" do
-        投稿する
-        %i.fa.fa-edit
+
+      - unless user_signed_in?
+        = link_to new_user_registration_path, class:"header-right__mypage" do
+          新規登録
+          %i.fa.fa-caret-right
+
+      - if user_signed_in?
+        = link_to "/", class:"header-right__mypage" do
+          マイページ
+          %i.fa.fa-caret-right
+        = link_to new_article_path, class:"header-right__article" do
+          投稿する
+          %i.fa.fa-edit
