@@ -9,7 +9,6 @@
 |avatar|string|foreign_key: true|
 
 ### Association
-- belongs_to :avatar
 - has_many :articles
 - has_many :comments
 
@@ -22,12 +21,12 @@
 |body|text|null: false|
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
-|category_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :comments
 - has_many :tags, through: :article_tags
 - has_many :article_tags
+- belongs_to :users
 
 
 ## commentsテーブル
