@@ -14,7 +14,7 @@
           %i.fa.fa-caret-right
 
       - if user_signed_in?
-        = link_to "/", class:"header-right__mypage" do
+        = link_to "/users/#{current_user.id}", class:"header-right__mypage" do
           マイページ
           %i.fa.fa-caret-right
         = link_to destroy_user_session_path, class:"header-right__mypage", method: :delete do
