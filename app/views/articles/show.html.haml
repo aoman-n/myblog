@@ -5,12 +5,15 @@
       .s-head
         .s-head-body
           .s-user-info
-            %a{href: "article_path", class: "s-user-info__user-avatar"} ava
+
+            = image_tag( @article.user.avatar, alt:"avatar", style: "width: 55px; height: 55px;", class: "s-user-info__user-avatar")
             %span.s-user-info__name #{@article.user.name}
-            %span.s-user-info__date #{@article.create_date}
+            %span.s-user-info__date #{@article.create_date}に更新
           #h3.s-head-body__title #{@article.title}
 
       .s-main
+        .s-main__text
+          = simple_format(@article.body)
 
       .comments-content
         .comment-body

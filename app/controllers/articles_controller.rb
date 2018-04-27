@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.order('id ASC').limit(10)
+    @articles = Article.order('id DESC').limit(10)
   end
 
   def show

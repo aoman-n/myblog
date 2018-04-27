@@ -9,6 +9,9 @@
         = link_to new_user_registration_path, class:"header-right__mypage" do
           新規登録
           %i.fa.fa-caret-right
+        = link_to new_user_session_path, class:"header-right__mypage" do
+          ログイン
+          %i.fa.fa-caret-right
 
       - if user_signed_in?
         = link_to "/", class:"header-right__mypage" do
@@ -20,3 +23,4 @@
         = link_to new_article_path, class:"header-right__article" do
           投稿する
           %i.fa.fa-edit
+

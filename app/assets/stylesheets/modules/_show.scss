@@ -10,12 +10,9 @@
       padding: 20px 30px;
       .s-user-info {
         &__user-avatar {
-          width: 30px;
-          height: 30px;
           display: inline-block;
         }
         &__name {
-
         }
         &__date {
 
@@ -31,6 +28,10 @@
     min-height: 500px;
     background-color: white;
     margin-bottom: 20px;
+    &__text {
+      padding:30px 30px;
+      font-size: 20px;
+    }
   }
   .comments-content {
     background-color: white;
