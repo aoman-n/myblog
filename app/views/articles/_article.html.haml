@@ -1,0 +1,12 @@
+.article-content.clearfix
+  = image_tag( article.user.avatar, alt:"avatar", style: "width: 40px; height: 40px;", class: "article-content__user-avatar")
+  .article
+    = link_to "/articles/#{article.id}", class:"article__title" do
+      = article.title
+    %ul.article__info
+      %li
+        = article.user.name
+      %li
+        %span.i.fa.fa-thumbs-up 3
+      %li
+        = article.created_at

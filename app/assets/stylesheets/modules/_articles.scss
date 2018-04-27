@@ -22,7 +22,6 @@
       &__user-avatar {
         float: left;
         margin-right: 10px;
-        @include hover();
       }
       .article {
         float: left;
