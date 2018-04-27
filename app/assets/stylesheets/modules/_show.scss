@@ -33,6 +33,32 @@
         margin-top: 20px;
         font-size: 30px;
       }
+      bottun {
+        color: #3ADF00;/*文字・アイコン色*/
+        border-radius: 7px;/*角丸に*/
+        display: inline-block;
+        height: 30px;/*高さ*/
+        width: 100px;/*幅*/
+        text-align: center;/*中身を中央寄せ*/
+        font-size: 17px;/*文字のサイズ*/
+        line-height: 30px;/*高さと合わせる*/
+        vertical-align: middle;/*垂直中央寄せ*/
+        // background: #3ADF00;
+        overflow: hidden;/*はみ出た部分を隠す*/
+        text-decoration:none;/*下線は消す*/
+        border: solid 2px #3ADF00;
+        @include hover ();
+        margin-top: 8px;
+        .fa {
+          text-shadow: 2px 2px 0px gray;
+          font-size: 20px;
+        }
+        span {
+          display:inline-block;
+          transition: .5s;
+          text-shadow: 1px 1px 0px gray;
+        }
+      }
     }
   }
   .s-main {

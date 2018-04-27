@@ -7,9 +7,12 @@
           .s-user-info
             %a{href: "/users/#{@article.user.id}", class: "s-user-info__user-avatar"}
               = image_tag( @article.user.avatar, alt:"avatar", style: "width: 55px; height: 55px;")
-            %p.s-user-info__name #{@article.user.name}
+            %p.s-user-info__name #{@article.user.name} さんの投稿
             %p.s-user-info__date #{@article.create_date}に更新
           #h3.s-head-body__title #{@article.title}
+          %bottun
+            %i{class: "fa fa-fw fa-thumbs-up",style: "margin-right: 2px;"}
+            %span 4
 
       .s-main
         .s-main__text
