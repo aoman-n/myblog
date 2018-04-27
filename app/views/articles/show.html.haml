@@ -16,25 +16,23 @@
           = simple_format(@article.body)
 
       .comments-content
-        .comment-body
+        .comment-body.clearfix
           %h3.comment-body__title Comment(20)
 
-          .comment.clearfix
-            .comment-left
-              = image_tag("#", alt: "profile_photo", class: "media-object", style: "width: 70px; height: 70px;")
-            .comment-right
-              .comment-right__user-name aoba
-              .comment-right__text おはようございます
-          .comment.clearfix
-            .comment-left
-              = image_tag("#", alt: "profile_photo", class: "media-object", style: "width: 70px; height: 70px;")
-            .comment-right
-              .comment-right__user-name aoba
-              .comment-right__text おはようございます
+          - @comments.each do |comment|
+            .comment.clearfix
+              .comment-left
+                = image_tag( comment.user.avatar, alt: "profile_photo", class: "media-object", style: "width: 60px; height: 60px;")
+              .comment-right
+                .comment-right__user-name
+                  #{comment.user.name}:
+                .comment-right__text
+                  = comment.content
+
           .comments-form
             %h4.comments-form__title Write a comment
             .comments-form__body
-              = form_for "#" do |f|
+              = form_for [@article, @comment] do |f|
                 = f.text_area :content, class: 'message', placeholder:'Input comment'
                 = f.submit '送信', class: 'send-bottun'
 

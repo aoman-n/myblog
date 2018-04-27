@@ -35,7 +35,6 @@
   }
   .comments-content {
     background-color: white;
-    min-height: 300px;
     .comment-body {
       padding: 20px 20px;
       &__title {
@@ -48,11 +47,12 @@
         }
         &-right {
           float: left;
+          padding: 0 0 0 10px;
           &__user-name {
-
+            color: #585858;
           }
           &__text {
-
+            padding: 10px 0 0 10px;
           }
         }
       }
