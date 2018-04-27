@@ -1,5 +1,5 @@
 .article-content.clearfix
-  = image_tag( article.user.avatar, alt:"avatar", style: "width: 40px; height: 40px;", class: "article-content__user-avatar")
+  = image_tag( article.user.avatar, alt:"avatar", style: "width: 55px; height: 55px;", class: "article-content__user-avatar")
   .article
     = link_to "/articles/#{article.id}", class:"article__title" do
       = article.title

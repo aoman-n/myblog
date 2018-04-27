@@ -10,7 +10,8 @@
           %a{href: "/articles/#{article.id}", class: "my-a-item__title"} #{article.title}
           .my-a-info
             %p.i.fa.fa-thumbs-up 3
-            = link_to '編集', edit_article_path("#{article.id}"),class: "my-a-info__edit", method: :delete
-            = link_to '削除', "/articles/#{article.id}",class: "my-a-info__edit", method: :delete
+            - if (params[:id] == current_user.id)
+              = link_to '編集', edit_article_path("#{article.id}"),class: "my-a-info__edit", method: :delete
+              = link_to '削除', "/articles/#{article.id}",class: "my-a-info__edit", method: :delete
 
 = render :partial => "articles/footer"

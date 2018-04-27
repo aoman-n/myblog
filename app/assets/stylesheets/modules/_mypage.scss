@@ -15,10 +15,11 @@
         font-size: 25px;
         font-style: italic;
         padding-bottom: 27px;
+        border-bottom: double 5px $main-back-color;
       }
       .my-a-item {
         padding: 20px 20px;
-        border-top: solid 2px $main-back-color;
+        border-bottom: solid 2px $main-back-color;
         &__title{
           font-size: 24px;
           display: block;
