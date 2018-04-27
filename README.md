@@ -64,14 +64,14 @@
 # 機能一覧
 
 ## article投稿機能
-- 投稿(text,image)
-- 削除
+- ~~投稿(text,image)~~
+- ~~削除~~
 - 編集
 
 ## userログイン機能
-- sign_up(+avata)
-- login
-- logout
+- ~~sign_up(+avata)~~
+- ~~login~~
+- ~~logout~~
 
 ## コメント投稿機能
 - 投稿
