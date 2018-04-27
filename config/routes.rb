@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'articles#index'
   resources :articles do
     resources :comments, only: [:create, :edit, :destroy, :update]
+    resources :goods, only: [:create]
   end
   resources :users, only: [:show]
 end

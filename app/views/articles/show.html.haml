@@ -10,9 +10,9 @@
             %p.s-user-info__name #{@article.user.name} さんの投稿
             %p.s-user-info__date #{@article.create_date}に更新
           #h3.s-head-body__title #{@article.title}
-          %bottun
+          %bottun.good-button{"data-id": "#{@article.id}"}
             %i{class: "fa fa-fw fa-thumbs-up",style: "margin-right: 2px;"}
-            %span 4
+            %span #{@good_count}
 
       .s-main
         .s-main__text
@@ -20,7 +20,7 @@
 
       .comments-content
         .comment-body.clearfix
-          %h3.comment-body__title Comment(20)
+          %h3.comment-body__title Comment(#{@comments.count})
 
           - @comments.each do |comment|
             .comment.clearfix
@@ -65,5 +65,7 @@
               Rubyの文法について
             %p.like-item__count
               %span.i.fa.fa-thumbs-up 6
+
+.article_id #{@article.id}
 
 = render :partial => "footer"

@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+
   def index
     @articles = Article.order('id DESC').limit(10)
   end
@@ -7,6 +8,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @comments = @article.comments.includes(:user)
     @comment = Comment.new
+    @good_count = @article.goods.count
   end
 
   def new

@@ -7,6 +7,8 @@
       %li
         by #{article.user.name}
       %li
-        %span.i.fa.fa-thumbs-up 3
-      %li
         = article.create_date
+      %li
+        %i.fa.fa-thumbs-up
+          %span #{article.goods.count}
+
