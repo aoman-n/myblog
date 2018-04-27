@@ -89,12 +89,17 @@
         margin-bottom: 8px;
         padding-bottom: 6px;
         .like-item {
+          margin-left: 15px;
           &__name {
             float: left;
+            text-decoration: none;
+            color: black;
+            @include hover();
           }
           &__count {
             float: left;
             padding-left: 10px;
+            color: gray;
           }
         }
       }

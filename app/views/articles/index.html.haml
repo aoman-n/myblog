@@ -27,13 +27,16 @@
 
       .like-content
         .like-content-head
-          like数ランキング
-        .like-list.clearfix
-          .like-item.clearfix
-            %p.like-item__name
-              Rubyの文法について
-            %p.like-item__count
-              %span.i.fa.fa-thumbs-up 6
+          Good数ランキング
+        - @ranking.each.with_index(1) do |article, i|
+          .like-list.clearfix
+            .like-item.clearfix
+              %a.like-item__name{href:"/articles/#{article.id}"}
+                #{i}位 #{article.title}
+              %p.like-item__count
+                %span.i.fa.fa-thumbs-up
+                  = article.goods.count
+
 
 = render :partial => "footer"
 

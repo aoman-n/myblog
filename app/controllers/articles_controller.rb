@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class ArticlesController < RankingController
 
   def index
     @articles = Article.order('id DESC').limit(10)
