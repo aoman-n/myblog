@@ -6,9 +6,9 @@
         .s-head-body
           .s-user-info
             %a{href: "article_path", class: "s-user-info__user-avatar"} ava
-            %span.s-user-info__name aoba
-            %span.s-user-info__date 2014/4/4
-          #h3.s-head-body__title ルビーの文法について
+            %span.s-user-info__name #{@article.user.name}
+            %span.s-user-info__date #{@article.create_date}
+          #h3.s-head-body__title #{@article.title}
 
       .s-main
 
