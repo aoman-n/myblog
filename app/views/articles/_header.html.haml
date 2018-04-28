@@ -2,7 +2,9 @@
   .header-body
     .header-left.clearfix
       %a{href: "/articles", class: "header-left__title"} MyBrog
-      .header-left__search search
+      = form_tag( "", method: :get, class: "header-left__search") do
+        %span.fa.fa-search
+        %input.header-left__search__input{autocomplete: "off", name: "q", placeholder: "キーワードを入力", required: "", type: "search"}
     .header-right.clearfix
 
       - unless user_signed_in?

@@ -30,6 +30,9 @@ class ArticlesController < RankingController
     end
   end
 
+  def edit
+  end
+
   def update
   end
 
