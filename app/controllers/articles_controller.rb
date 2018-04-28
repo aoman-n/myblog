@@ -9,10 +9,12 @@ class ArticlesController < RankingController
     @comments = @article.comments.includes(:user)
     @comment = Comment.new
     @good_count = @article.goods.count
+    @tags = @article.tags
   end
 
   def new
     @article = Article.new
+    @tags = Tag.all
   end
 
   def create
@@ -33,7 +35,7 @@ class ArticlesController < RankingController
 
   private
   def article_params
-    params.require(:article).permit(:title, :body, :image).merge( user_id: current_user.id)
+    params.require(:article).permit(:title, :body, :image, tag_ids: []).merge( user_id: current_user.id)
   end
 
 end

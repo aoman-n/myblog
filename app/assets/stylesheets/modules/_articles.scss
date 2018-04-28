@@ -70,7 +70,13 @@
             float: left;
           }
           &__text {
-            float: left;
+            margin-left: 8px;
+            float: right;
+            padding-right: 10px;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.0rem;
+
           }
         }
       }
@@ -97,8 +103,8 @@
             @include hover();
           }
           &__count {
-            float: left;
-            padding-left: 10px;
+            float: right;
+            padding-right: 10px;
             color: gray;
           }
         }

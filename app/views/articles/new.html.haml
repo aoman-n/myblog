@@ -12,6 +12,11 @@
       .form-image
         %p.form-image__head
         = f.file_field :image, class: "form-image__input"
+      .form-tags
+        %p.form-tags__head タグを選択
+        = f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |b|
+          = b.label { b.check_box + b.text }
+
       .form-submit
         = f.submit "SEND", class: 'form-submit__bottun'
 
