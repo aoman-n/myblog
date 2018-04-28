@@ -1,0 +1,21 @@
+.tag-content
+  .tag-content-head
+    タグ数ランキング
+  - tag_ranking.each.with_index(1) do |tag, i|
+    .tag-list.clearfix
+      .tag-item.clearfix
+        %p.tag-item__rank
+          #{i}位 #{tag.name}
+        %p.tag-item__text
+          #{tag.articles.count}
+.like-content
+  .like-content-head
+    Good数ランキング
+  - @good_ranking.each.with_index(1) do |article, i|
+    .like-list.clearfix
+      .like-item.clearfix
+        %a.like-item__name{href:"/articles/#{article.id}"}
+          #{i}位 #{article.title}
+        %p.like-item__count
+          %span.i.fa.fa-thumbs-up
+            = article.goods.count

@@ -6,10 +6,18 @@
         .s-head-body
           .s-user-info
             %a{href: "/users/#{@article.user.id}", class: "s-user-info__user-avatar"}
-              = image_tag( @article.user.avatar, alt:"avatar", style: "width: 55px; height: 55px;")
+              - if @article.user.avatar.present?
+                = image_tag( @article.user.avatar, alt:"avatar", style: "width: 55px; height: 55px;")
+              - else
+                = image_tag( "/assets/no-image.png", alt:"avatar", style: "width: 55px; height: 55px;")
             %p.s-user-info__name #{@article.user.name} さんの投稿
             %p.s-user-info__date #{@article.create_date}に更新
           #h3.s-head-body__title #{@article.title}
+          .s-tags
+            - @tags.each do |tag|
+              %a{href: "#", class: "s-tags__item"}
+                %span
+                  = tag.name
           %bottun.good-button{"data-id": "#{@article.id}"}
             %i{class: "fa fa-fw fa-thumbs-up",style: "margin-right: 2px;"}
             %span #{@good_count}
@@ -40,30 +48,7 @@
                 = f.submit '送信', class: 'send-bottun'
 
     .right-content
-      .tag-content
-        .tag-content-head
-          タグ数ランキング
-        .tag-list.clearfix
-          .tag-item.clearfix
-            %p.tag-item__rank
-              1.
-            %p.tag-item__text
-              Ruby
-        .tag-list.clearfix
-          .tag-item.clearfix
-            %p.tag-item__rank
-              1.
-            %p.tag-item__text
-              Ruby
+      = render partial: "ranking", locals: { tag_ranking: @tag_ranking, good_ranking: @good_ranking }
 
-      .like-content
-        .like-content-head
-          like数ランキング
-        .like-list.clearfix
-          .like-item.clearfix
-            %p.like-item__name
-              Rubyの文法について
-            %p.like-item__count
-              %span.i.fa.fa-thumbs-up 6
 
 = render :partial => "footer"

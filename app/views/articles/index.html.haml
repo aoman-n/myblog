@@ -1,42 +1,15 @@
-= render :partial => "header"
+= render partial: "header"
 
 .main
   .main-container.clearfix
     .left-content
       %h3.left-content-head
         記事一覧
-
       = render @articles
 
     .right-content
-      .tag-content
-        .tag-content-head
-          タグ数ランキング
-        .tag-list.clearfix
-          .tag-item.clearfix
-            %p.tag-item__rank
-              1.
-            %p.tag-item__text
-              Ruby
-        .tag-list.clearfix
-          .tag-item.clearfix
-            %p.tag-item__rank
-              1.
-            %p.tag-item__text
-              Ruby
+      = render partial: "ranking", locals: { tag_ranking: @tag_ranking, good_ranking: @good_ranking }
 
-      .like-content
-        .like-content-head
-          Good数ランキング
-        - @ranking.each.with_index(1) do |article, i|
-          .like-list.clearfix
-            .like-item.clearfix
-              %a.like-item__name{href:"/articles/#{article.id}"}
-                #{i}位 #{article.title}
-              %p.like-item__count
-                %span.i.fa.fa-thumbs-up
-                  = article.goods.count
-
-= render :partial => "footer"
+= render partial: "footer"
 
 
