@@ -4,6 +4,10 @@ class ArticlesController < RankingController
     @articles = Article.order('id DESC').limit(10)
   end
 
+  def search
+    @articles = Article.where('title LIKE(?)', "%#{params[:q]}%")
+  end
+
   def show
     @article = Article.find(params[:id])
     @comments = @article.comments.includes(:user)
